@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" id="theme" />
+    <link rel="icon" type="image/x-icon" href="../../assets/calculator.ico">
+</head>
+<body>
+    <h1>Eagler</h1>
+    <div class="game-container">
+        <iframe id="gameFrame" src="../../assets/calculator/html/eaglerWASM.html"></iframe>
+        <button class="fullscreen-btn" onclick="goFullscreen()">Fullscreen</button>
+    </div>
+    <script>
+        function goFullscreen() {
+            let gameFrame = document.getElementById("gameFrame");
+            if (gameFrame.requestFullscreen) {
+                gameFrame.requestFullscreen();
+            } else if (gameFrame.mozRequestFullScreen) { 
+                gameFrame.mozRequestFullScreen();
+            } else if (gameFrame.webkitRequestFullscreen) { 
+                gameFrame.webkitRequestFullscreen();
+            } else if (gameFrame.msRequestFullscreen) { 
+                gameFrame.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
