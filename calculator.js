@@ -75,12 +75,10 @@ function keyboardInputHandler(e) {
   //press enter to see result
   if (e.key === "Enter") {
     calculate(result.value);
-    console.log(result.value);
-    //if the result is 420 then go to home
+    //if the result is 500 then go to home
     if (result.value === "500"){
       // go to home
-      console.log("going home")
-      window.location.href = "home";
+      window.location.href = "/home";
     }
   }
 
