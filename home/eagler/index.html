@@ -12,6 +12,7 @@
     <div class="game-container">
         <iframe id="gameFrame" src="../../assets/calculator/html/eaglerWASM.html"></iframe>
         <button class="fullscreen-btn" onclick="goFullscreen()">Fullscreen</button>
+        <button class="back-btn" onclick="goBack()">Back to Home</button>
     </div>
     <script>
         function goFullscreen() {
@@ -25,6 +26,10 @@
             } else if (gameFrame.msRequestFullscreen) { 
                 gameFrame.msRequestFullscreen();
             }
+        }
+
+        function goBack() {
+            window.location.href = "/home";
         }
     </script>
 </body>

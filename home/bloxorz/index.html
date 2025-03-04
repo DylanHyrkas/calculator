@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloxorz</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css" id="theme" />
     <link rel="icon" type="image/x-icon" href="../../assets/calculator.ico">
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
@@ -15,6 +15,7 @@
             <param name="allowfullscreen" value="true">
         </object>
         <button class="fullscreen-btn" onclick="goFullscreen()">Fullscreen</button>
+        <button class="back-btn" onclick="goBack()">Back to Home</button>
     </div>
     <script>
         function goFullscreen() {
@@ -28,6 +29,10 @@
             } else if (flashGame.msRequestFullscreen) { 
                 flashGame.msRequestFullscreen();
             }
+        }
+
+        function goBack() {
+            window.location.href = "/home";
         }
     </script>
 </body>

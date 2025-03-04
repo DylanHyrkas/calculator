@@ -4,28 +4,52 @@ body {
     background-color: #1a1a1a;
     color: white;
 }
+
 h1 {
     margin-top: 20px;
 }
+
 .game-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
 }
+
 .game {
     background-color: #333;
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.game:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.game a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .game img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1; /* Ensures a perfect square */
+    object-fit: cover; /* Crops images to fill the square */
+    background-color: #222; /* Fallback color for transparent images */
     border-radius: 10px;
+    display: block;
 }
+
 h3 {
-    text-decoration: none;
     color: white;
+    margin-top: 10px;
 }

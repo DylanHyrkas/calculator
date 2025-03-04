@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" id="theme" />
+    <link rel="icon" type="image/x-icon" href="../../assets/calculator.ico">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+    <h1>Fancy Pants Adventures World 2</h1>
+    <div class="game-container">
+        <object id="flashGame" class="flash-game" width="800" height="600" data="../../assets/calculator/flash/fancypantsadventures2.swf">
+            <param name="allowfullscreen" value="true">
+        </object>
+        <button class="fullscreen-btn" onclick="goFullscreen()">Fullscreen</button>
+        <button class="back-btn" onclick="goBack()">Back to Home</button>
+    </div>
+    <script>
+        function goFullscreen() {
+            let flashGame = document.getElementById("flashGame");
+            if (flashGame.requestFullscreen) {
+                flashGame.requestFullscreen();
+            } else if (flashGame.mozRequestFullScreen) { 
+                flashGame.mozRequestFullScreen();
+            } else if (flashGame.webkitRequestFullscreen) { 
+                flashGame.webkitRequestFullscreen();
+            } else if (flashGame.msRequestFullscreen) { 
+                flashGame.msRequestFullscreen();
+            }
+        }
+
+        function goBack() {
+            window.location.href = "/home";
+        }
+    </script>
+</body>
+</html>

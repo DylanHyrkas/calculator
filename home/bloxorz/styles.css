@@ -16,12 +16,14 @@ h1 {
     justify-content: center;
     height: 80vh;
 }
-.flash-game {
+iframe {
     width: 80%;
     height: 60vh;
+    border: none;
+    border-radius: 10px;
     background: black;
 }
-.fullscreen-btn {
+.fullscreen-btn, .back-btn {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #ff6600;
@@ -29,4 +31,7 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.back-btn {
+    background-color: #333;
 }

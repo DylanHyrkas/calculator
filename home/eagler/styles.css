@@ -23,7 +23,7 @@ iframe {
     border-radius: 10px;
     background: black;
 }
-.fullscreen-btn {
+.fullscreen-btn, .back-btn {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #ff6600;
@@ -31,4 +31,7 @@ iframe {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.back-btn {
+    background-color: #333;
 }
