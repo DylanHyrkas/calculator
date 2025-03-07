@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Calculator</title>
-  <meta name="description" content="Simple Calculator With Dark Mode." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="assets/calculator.ico">
-  <link rel="stylesheet" href="calculator.css" id="theme" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
-
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <div class="header-container">
-        <!-- This heading also notifies about the theme change.-->
-        <h1 id="toast">Calculator</h1>
-        <div class="top-buttons">
+    <div class="calculator" id="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button class="operator" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="deleteLast()">←</button>
+            <button class="operator" onclick="appendToDisplay('%')">%</button>
+            <button class="operator" onclick="appendToDisplay('/')">÷</button>
+            
+            <button class="number" onclick="appendToDisplay('7')">7</button>
+            <button class="number" onclick="appendToDisplay('8')">8</button>
+            <button class="number" onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+            
+            <button class="number" onclick="appendToDisplay('4')">4</button>
+            <button class="number" onclick="appendToDisplay('5')">5</button>
+            <button class="number" onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">−</button>
+            
+            <button class="number" onclick="appendToDisplay('1')">1</button>
+            <button class="number" onclick="appendToDisplay('2')">2</button>
+            <button class="number" onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            
+            <button class="number" onclick="appendToDisplay('0')">0</button>
+            <button class="number" onclick="appendToDisplay('.')">.</button>
+            <button class="equal-btn" onclick="calculateResult()">=</button>
         </div>
-      </div>
-      <div class="first-row">
-        <input type="text" name="result" id="result" placeholder="Result" readonly />
-        <input type="button" value="C" onclick="result.value=''" id="clear-button" />
-      </div>
-      <div class="second-row">
-        <input type="button" value="1" onclick="liveScreen(1)" />
-        <input type="button" value="2" onclick="liveScreen(2)" />
-        <input type="button" value="3" onclick="liveScreen(3)" />
-        <input type="button" value="+" onclick="liveScreen('+')" />
-      </div>
-      <div class="third-row">
-        <input type="button" value="4" onclick=" liveScreen(4)" />
-        <input type="button" value="5" onclick=" liveScreen(5)" />
-        <input type="button" value="6" onclick=" liveScreen(6)" />
-        <input type="button" value="-" onclick="liveScreen('-')" />
-      </div>
-      <div class="fourth-row">
-        <input type="button" value="7" onclick="liveScreen(7)" />
-        <input type="button" value="8" onclick="liveScreen(8)" />
-        <input type="button" value="9" onclick=" liveScreen(9)" />
-        <input type="button" value="x" onclick="liveScreen('*')" />
-      </div>
-      <div class="fifth-row">
-        <input type="button" value="/" onclick="liveScreen('/')" />
-        <input type="button" value="0" onclick="liveScreen(0)" />
-        <input type="button" value="." onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="calculate(result.value)" />
-      </div>
-    </div>
-  </div>
-  <script src="calculator.js">
-  </script>
-</body>
+        
+        <!-- History Section -->
+        <div class="history-container">
+            <h2 id="history-title">History</h2>
+            <ul id="history-list"></ul>
+        </div>
 
+        <div class="lower-button-container">
+          <button class="clear-history-btn" onclick="clearHistory()">Clear History</button>
+          <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
