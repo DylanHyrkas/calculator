@@ -43,7 +43,7 @@ function calculateResult() {
         addToHistory(display.value + " = " + result);
         display.value = result;
         if(result === 500){
-            window.location.href = "/home";
+            window.location.href = "home";
         }
     } catch (error) {
         display.value = "Error";
