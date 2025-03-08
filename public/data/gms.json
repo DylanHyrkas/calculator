@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Bloxorz",
+    "image": "/assets/bloxorz.jpg",
+    "game-url": "/assets/gms/flash/bloxorz.swf"
+  },
+  {
+    "id": 2,
+    "name": "Eaglercraft",
+    "image": "/assets/eagler.jpg",
+    "game-url": "/assets/gms/html/eaglerWASM.html"
+  },
+  {
+    "id": 3,
+    "name": "Fancy Pants Adventures",
+    "image": "/assets/fancypantsadventures1.jpg",
+    "game-url": "/assets/gms/flash/fancypantsadventures1.swf"
+  },
+  {
+    "id": 4,
+    "name": "Fancy Pants Adventures 2",
+    "image": "/assets/fancypantsadventures2.jpg",
+    "game-url": "/assets/gms/flash/fancypantsadventures2.swf"
+  }
+]
